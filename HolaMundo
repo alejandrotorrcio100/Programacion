@@ -1,0 +1,19 @@
+// Hola Mundo 2.cpp : Defines the entry point for the console application.
+//Nombre: Walter Alejandro Torrico Silva
+// Librerias
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+void main()// Cuerpo principal. void indica que no devuelve valores
+
+{
+	cout<<"Hola Mundo"<<endl;
+    cout<<"Soy Walter Torrico \n"<<"Mucho Gusto";
+    getch() ;
+	
+}
+
