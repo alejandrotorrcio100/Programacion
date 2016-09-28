@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main ()
+
+{ float A,B,C,D,X1,X2,XR,XI,X;
+   cout<<"Ingresar A: ";
+   cin>> A;
+   if (A==0)
+	   cout<<"Error";
+   else 
+
+   cout<<"Ingresar B: ";
+   cin>> B;
+   cout<<"Ingresar C: ";
+   cin>> C;
+   D=pow(B,2)-4*A*C;
+
+    if(D>=0)
+		if(D==0)
+		 {X=-B/(2*A);
+	     cout<<"Solucion Unica X:  "<<X;}
+	     else
+	     {X1=-B+sqrt(D)/(2*A);
+	     cout<<"Solucion Real X1:  "<<X1;
+	     X2=-B-sqrt(D)/(2*A);
+		 cout<<"Solucion Real X2:  "<<X2;}
+    else
+	{XR=-B/(2*A);
+	 XI=sqrt(-B)/(2*A);
+	 cout<<"La Solucion Imaginaria 1 es:  "<<XR<<"+"<<XI<<"i";
+	 cout<<"La Solucion Imaginarai 2 es:  "<<XR<<"-"<<XI<<"i";
+	}
+
+
+
+  getch();
+
+  }
+
