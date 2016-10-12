@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main ()
+
+{ float s,x;
+  int n,i,fact,flag;
+  s=0; //Acumulador de la Suma
+  flag=-1; //Inicia la sere en negativo
+  fact=1; //Acumulador de producto
+  cout<<"Ingrese el numero de elementos de la serie: ";
+  cin>> n;
+  cout<<"ingrese el valor de x: ";
+  cin>> x;
+
+  for ( i=1;i<=n;i=i+2)
+  {
+	  s=s+flag*(pow(x,i)/fact);
+	  fact=fact*(i+1)*(i+2);
+
+  }
+  cout<< "La suma es : "<<s;
+  getch();
+}
