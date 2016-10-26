@@ -1,0 +1,96 @@
+// Menu con Funciones.cpp : Defines the entry point for the console application.
+// WALTER ALEJANDRO TORRICO SILVA
+
+#include "stdafx.h"
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float TSuma(float A,float B);
+float TResta(float A,float B);
+float TMultiplicacion(float A,float B);
+float TDivision(float A,float B);
+
+void main()
+
+{float A,B,C,Suma,Resta,Multiplicacion,Division; int Opcion;
+ 
+{
+  do{ 
+	cout<<"Ingresar el valor A: ";
+	cin>>A;
+  }while(A>=0)
+ 
+  do{
+    cout<<"Ingresar el Valor B: ",
+	cin>>B;
+  }while(B>=0)
+  
+	cout<<"Menu"<<endl;
+	cout<<"1.- Suma"<<endl;
+	cout<<"2.- Resta"<<endl;
+	cout<<"3.- Multiplicacion"<<endl;
+	cout<<"4.- Division"<<endl;
+	cout<<"OPCION";
+	cin>>Opcion;
+ 
+	 switch (Opcion)
+
+	 { case 1:  Suma=TSuma(A,B);
+	     cout<<"La Suma es: "<<Suma;
+		 break;
+	   case 2: Resta=TResta(A,B);
+		 cout<<"La Resta es: "<<Resta;
+		  break;
+	   case 3: Multiplicacion=TMultiplicacion (A,B);
+         cout<<"La Multiplicacion es: "<<Multiplicacion;
+		  break;
+	   case 4: Division=TDivision(A,B);
+		  cout<<"La Division es: "<<Division;
+		  break;
+	   case 0:cout<<"Salir";
+		   break;
+	   default : cout<<"Error";
+		   break;
+	 }
+
+	 getch();
+  
+  }
+  while (Opcion!=0);
+   
+  
+float TSuma(float A,float B)
+	  
+  {
+		 float R;
+		 R=A+B;
+		 return R;
+	 }
+   
+	 float TResta(float A,float B)
+	 {
+		 float R;
+		 R=A-B;
+		 return R;
+    
+	 }
+
+	 float TMultiplicacion(float A,float B)
+	 {
+		  float R;
+		 R=A*B;
+		 return R;
+	 }
+
+  	 float TDivision(float A,float B)
+	 {
+		  float R;
+		 R=A/B;
+		 return R;
+	 }
+
+	  }
+    
