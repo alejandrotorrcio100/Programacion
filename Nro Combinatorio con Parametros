@@ -1,0 +1,48 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+//Prototipos
+int facto(int f);
+float  combi(float n,float r);
+
+//Cuerpó Principal
+void main()
+{
+	float n1,r1,x;
+	int f1,aux;
+	do{
+		cout<<"Ingresar el valor de N: ";
+		cin>>n1;
+	} while (!(n1>=0));
+	do{	
+	    cout<<"Ingresar el valor de R: ";
+		cin>>r1;
+	} while (!(r1>=0));
+
+//Llamar a la funcion
+
+	x=combi(n1,r1);
+	cout<<"La combinatoria es: "<<x;
+	getch();
+
+}
+
+//Declaraciones
+int facto(int f)
+{ 
+	int aux=1;
+		for (int i=2;i<=f;i++)
+			aux=aux*i;  //Acumulador de Producto
+return aux;   //Devolver la salida
+}
+
+float combi(float n,float r)
+{
+	float auxcombi;
+	auxcombi=facto(n)/(facto(r)*facto(n-r)); //Llama a otra funcion
+	return auxcombi;
+}
+
