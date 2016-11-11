@@ -1,0 +1,39 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "stdlib.h"
+
+using namespace std;
+
+
+
+void main()
+{ 
+	int i,id,n,np,ef,p1,p2,p3;
+	float nf;
+	cout<< " Introduzca la cantidad de alumnos: " ;
+	cin>> n;
+	for(i=1;i<=n;i++)
+	{
+        cout<<"ingrese los datos del estudiante: "<<i<<endl;
+		cout<< " ID: ";
+	    cin>> id;
+		cout<< " Introduzca la nota practica: "<< endl; 
+	    cin>> np;
+		cout<< " Introduzca la nota de los tres parciales: "<< endl;
+	    cin>> p1;
+		cin>> p2;
+		cin>> p3;
+		cout<< " Introduzca la nota del examen final: "<< endl;
+	    cin>> ef;
+		nf=np*0.2+((p1+p2+p3)/3)*0.4+ef*0.4;
+		cout<< " La nota final es: "<< nf;
+		getch();
+		system("cls");
+	}
+	
+	
+	getch();
+	
+  
+}
