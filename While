@@ -1,0 +1,45 @@
+ #include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int registro,faltas,cont=0;
+	float p1,p2,pp,ef,notafinal,final,promedio=0;
+	cout<<"ingresar registro:  ";
+	cin>>registro;
+	while(registro!=-999)
+	{
+		cout<<"ingresar p1: ";
+		cin>>p1;
+		cout<<"ingrese p2:  ";
+		cin>>p2;
+		cout<<"ingresar pp: ";
+		cin>>pp;
+		cout<<"ingresar ef: ";
+		cin>>ef;
+		cout<<"ingrese faltas: ";
+		cin>>faltas;
+
+		if(faltas>10)
+		
+			final=0;
+		
+		notafinal=((p1+p2)/2)*0.4+(pp*0.2)+(ef*0.1);
+		cout<<registro<<" "<<notafinal<<"  ";
+		
+		if(notafinal>=51)
+		
+			cout<<"APROBADO";
+		else
+			cout<<"REPROBADO"<<endl;
+
+		cout<<"ingrese registro: "<<endl;
+		cin>>registro;
+		
+		promedio=promedio + notafinal;
+		cont++;
+	}
+	cout<<"el promedio es: "<<promedio/cont;
+	getch();
+}
