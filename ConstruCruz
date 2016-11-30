@@ -1,0 +1,61 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#define MAX 100
+
+using namespace std;
+void cargarregistro(float a[],int b);
+void main()
+{
+	float a[MAX];
+	int opcion,b;
+	system("color f4");
+	do{
+cout<<"     *****   MENU DE OFICIOS   ******"<<endl;
+	cout<<"1.-Carpintero     4.-Albanil\n"<<endl;
+	cout<<"2.-Plomero        5.-Electricista \n"<<endl;
+	cout<<"3.-Pintor         6.-Tapicero      \n "<<endl;
+	cout<<"7.-Registro de trabajado      0.-SALIR \n"<<endl;
+	cout<<"ELEGIR EL OFICIO REQUERIDO:  ";
+	
+cin>>opcion;
+	}
+	while((opcion<0)||(opcion>7));
+switch(opcion)
+{ 
+case 1: cout<<" \n Lista de trabajos de carpinteros"<<endl;
+	cout<<"1.-Escritorios             2.-Mesas"<<endl;
+	cout<<"3.-Respaldares de cama     4.-Repisas"<<endl;
+	break;
+case 2: cout<<" \n Lista de trabajos de Plomero"<<endl;
+	cout<<"1.-Reparacion de cañerias       2.-Instalaciones de baños/griferias"<<endl;
+		break;
+case 3: cout<<"\n Lista de trabajos pintores"<<endl;
+cout<<"1.-Pintado de casas            2.-Cuartos"<<endl;
+cout<<"3.-Carteles"<<endl;
+break;
+case 4:cout<<"\n Lista de trabajos de albañiles"<<endl;
+	cout<<"1.-Revocado     2.-Levantamiento de muros \n"<<endl;
+	cout<<"3.-Refacciones  4.-Construcciones de techo \n"<<endl;
+	break;
+case 5: cout<<"\n Lista de trabajos de Electricistas"<<endl;
+	cout<<"1.-Colocado de lamparas    2.-Instalaciones electricas \n"<<endl;
+	cout<<"3.-Reparaciones electrodomesticas   \n"<<endl;
+	break;
+case 6: cout<<"\n Lista de trabajos de Tapizadores"<<endl;
+	cout<<"1.-Tapizado de sillones     2.-Tapizado de sillas \n"<<endl;
+	cout<<"3.-Fabricacion de almohadones \n"<<endl;
+	break;
+case 7: cargarregistro(a,b);
+	
+case 0: cout<<"Salir";
+	break;
+default:cout<<"error";
+	break;
+}
+
+getch();
+}
+void cargarregistro(float a[],int b)
+{
