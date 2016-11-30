@@ -1,0 +1,96 @@
+#include "stdafx.h"
+	#include <iostream>
+	#include "conio.h"
+	#include "math.h"
+	#define MAX 100
+	
+	using namespace std;
+	
+	void cargarvector(int a[],int tam);
+	void mostrarvector(int a[],int tam);
+	void burbuja(int a[],int tam);
+	int busquedabinaria(int T[],int n,int K[],int s, int J[],int &u);
+
+
+	
+	int main()
+	{
+	   int T[MAX],K[MAX],J[MAX],n,s,u;          
+	   do{
+	   cout<<"Ingresar el valor: ";
+	   cin>>n;
+	 } while
+	  ((n<=0)||(n>MAX));
+	 do{
+      cout<<"Ingresar el valor: ";
+      cin>>s;
+          } while
+         ((s<=0)||(s>MAX));
+	
+	cargarvector(T,n);
+	cargarvector(K,s);
+	burbuja(T,n);
+	burbuja(K,s);
+	busquedabinaria(T,n,K,s,J,u);
+	mostrarvector(J,u);
+
+  getch();
+	return 0;
+	}
+	
+	void cargarvector(int a[],int tam)
+	{
+	for (int i=0;i<tam;i++)
+	{
+	cout<<"Ingresar a["<<i<<"]";
+	cin>>a[i];
+	}
+	}
+	
+	void mostrarvector(int a[],int tam)
+	{
+	for (int i=0;i<tam;i++)
+	{
+	cout<<"a["<<i<<"]"<<a[i]<<endl;
+	cin>>a[i];
+	}
+	}
+	void burbuja(int a[],int tam)
+	{
+	 int aux;
+	 for (int i=0;i< tam-1;i++)
+	   for (int j=i+1;j<tam;j++)
+	     if  (a[i]>a[j])
+	         {aux=a[i];
+	         a[i]=a[j];
+	         a[j]=aux;}
+	   }
+	
+int busquedabinaria(int T[],int n,int K[],int s, int J[],int &u)
+{
+	int i=0,j=0,a=0;
+	while ((i<n)&&(j<s))
+if(T[i]< K[j])
+  {
+    J[s]=T[i];
+         i++;
+  }
+        else
+   {
+     K[s]=J[j];
+          j++;
+             }
+         K++;
+ 
+while (i<n)
+{ K[s]=T[i];
+i++;
+K++;
+}
+while (j<s)
+{ K[s]=J[j];
+j++;
+K++;
+}
+u=K;
+}
