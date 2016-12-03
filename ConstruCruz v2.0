@@ -1,0 +1,174 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#define MAX 100
+
+using namespace std;
+void cargarregistro(char a[]);
+void mostrarregistro(char a[]);
+void main()
+{
+	char a[MAX];
+	int opcion,op;
+	system("color f4");
+	do {
+		cout << "     *****   MENU DE OFICIOS   ******" << endl;
+		cout << "1.-Carpintero     4.-Albanil\n" << endl;
+		cout << "2.-Plomero        5.-Electricista \n" << endl;
+		cout << "3.-Pintor         6.-Tapicero      \n " << endl;
+		cout << "7.-Registro de trabajado     8.-trabajador registrados  0.-SALIR \n" << endl;
+		cout << "ELEGIR EL OFICIO REQUERIDO:  ";
+
+		cin >> opcion;
+	} while ((opcion<0) || (opcion>7));
+	switch (opcion)
+	{
+	case 1: cout << " \n Lista de trabajos de carpinteros" << endl;
+		cout << "1.-Escritorios             2.-Mesas" << endl;
+		cout << "3.-Respaldares de cama     4.-Repisas" << endl;
+		cout << "escribir opcion:" << endl;
+		cin >> op;
+		switch (op) {
+		case 1: cout << "JUAN PEREZ 7425690" << endl;
+			cout << "Pedro Murillo 67890311" << endl;
+			break;
+		case 2: cout << "lorgio Vaca 77644958" << endl;
+			cout << "sergio Balcazar 75381085" << endl;
+			break;
+		case 3: cout << "Daniel Mendez 67980311" << endl;
+			cout << "Marco Vaca 76581080" << endl;
+			break;
+		case 4: cout << "Tito Perez 6540311" << endl;
+			cout << "daniel loayza 78954612" << endl;
+				break;
+		default:cout << "error";
+			break;
+	}
+		break;
+	case 2: cout << " \n Lista de trabajos de Plomero" << endl;
+		cout << "1.-Reparacion de cañerias       2.-Instalaciones de baños/griferias" << endl;
+		cin >> op;
+		switch (op) {
+		case 1: cout << "JUAN PEREZ 7425690" << endl;
+			cout << "Pedro Murillo 67890311" << endl;
+			break;
+		case 2: cout << "lorgio Vaca 77644958" << endl;
+			cout << "sergio Balcazar 75381085" << endl;
+			break;
+		case 3: cout << "Daniel Mendez 67980311" << endl;
+			cout << "Marco Vaca 76581080" << endl;
+			break;
+		case 4: cout << "Tito Perez 6540311" << endl;
+			cout << "daniel loayza 78954612" << endl;
+				break;
+		default:cout << "error";
+			break;}
+		break;
+	case 3: cout << "\n Lista de trabajos pintores" << endl;
+		cout << "1.-Pintado de casas            2.-Cuartos" << endl;
+		cout << "3.-Carteles" << endl;
+		cin >> op;
+		switch (op) {
+		case 1: cout << "JUAN PEREZ 7425690" << endl;
+			cout << "Pedro Murillo 67890311" << endl;
+			break;
+		case 2: cout << "lorgio Vaca 77644958" << endl;
+			cout << "sergio Balcazar 75381085" << endl;
+			break;
+		case 3: cout << "Daniel Mendez 67980311" << endl;
+			cout << "Marco Vaca 76581080" << endl;
+			break;
+		case 4: cout << "Tito Perez 6540311" << endl;
+			cout << "daniel loayza 78954612" << endl;
+				break;
+		default:cout << "error";
+			break;}
+		break;
+	case 4:cout << "\n Lista de trabajos de albañiles" << endl;
+		cout << "1.-Revocado     2.-Levantamiento de muros \n" << endl;
+		cout << "3.-Refacciones  4.-Construcciones de techo \n" << endl;
+		cin >> op;
+		switch (op) {
+		case 1: cout << "JUAN PEREZ 7425690" << endl;
+			cout << "Pedro Murillo 67890311" << endl;
+			break;
+		case 2: cout << "lorgio Vaca 77644958" << endl;
+			cout << "sergio Balcazar 75381085" << endl;
+			break;
+		case 3: cout << " 67980311" << endl;
+			cout << "Carlos Paredes 76581080" << endl;
+			break;
+		case 4: cout << "Rodolfo Orellanos 6540311" << endl;
+			cout << "Bonifacio Orellana 78954612" << endl;
+				break;
+		default:cout << "error";
+			break;}
+		break;
+	case 5: cout << "\n Lista de trabajos de Electricistas" << endl;
+		cout << "1.-Colocado de lamparas    2.-Instalaciones electricas \n" << endl;
+		cout << "3.-Reparaciones electrodomesticas   \n" << endl;
+		cin >> op;
+		switch (op) {
+		case 1: cout << "Fernando Carvallo 7425690" << endl;
+			cout << "Luis nuñes 67890311" << endl;
+			break;
+		case 2: cout << "Gregorio Welzel 77644958" << endl;
+			cout << "David Menacho 75381085" << endl;
+			break;
+		case 3: cout << "Justin Portillo 67980311" << endl;
+			cout << "Carlos Mamani 76581080" << endl;
+			break;
+		case 4: cout << "Ronald Mc Queen 6540311" << endl;
+			cout << "Donal Clinton 78954612" << endl;
+				break;
+		default:cout << "error";
+			break;}
+		break;
+	case 6: cout << "\n Lista de trabajos de Tapizadores" << endl;
+		cout << "1.-Tapizado de sillones     2.-Tapizado de sillas \n" << endl;
+		cout << "3.-Fabricacion de almohadones \n" << endl;
+		cin >> op;
+		switch (op) {
+		case 1: cout << "Pablo Menacho 7425690" << endl;
+			cout << "Diego Justiniano 67890311" << endl;
+			break;
+		case 2: cout << "Rocky Baldosa 77644958" << endl;
+			cout << "Ali Muhammed 75381085" << endl;
+			break;
+		case 3: cout << "Rafael Nadal 67980311" << endl;
+			cout << "Sebelindo Parada 76581080" << endl;
+			break;
+		case 4: cout << "Radamel Falcao 6540311" << endl;
+			cout << "Ñunflo de Chavez 78954612" << endl;
+				break;
+		default:cout << "error";
+			break;}
+		break;
+	case 7: cargarregistro(a);
+	case 8: mostrarregistro(a);
+		
+	case 0: cout << "Salir";
+		break;
+	default:cout << "error";
+		break;
+	}
+
+	getch();
+}
+void cargarregistro(char a[])
+{
+	int b=5, i;
+	cout << "escribir nombre a registrar: ";
+	for (i=0;i <= b;i++)
+		cin >> a[i];
+	cout<<"registro correcto de: "<<" a["<<i<<"]="<<a[i]<<endl;
+}
+void mostrarregistro(char a[])
+{
+	int i, b = 5;
+	for (i = 0;i <= b;i++)
+		cout <<" a["<<i<<"]="<<a[i]<<endl;
+
+}
